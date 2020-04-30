@@ -36,9 +36,13 @@ top: 40px;left:40px
  .logo{
 height: 35px;
  }
+ .logo:hover{
+     animation: moveToRoght  1s ease-out ;
+ }
  .heading-primary{
   color:#fff;
   text-transform: uppercase;
+  backface-visibility: hidden;
 
  }
  .text-box{
@@ -52,10 +56,44 @@ height: 35px;
      font-size: 60px;
      font-weight: 400;
      letter-spacing: 35px;
+     animation-name: moveToLeft;
+     animation-duration: 1s;
+     animation-timing-function: ease-out;
 }
 .heading-primary-sub{
     display: block;
     font-size: 20px;
     font-weight: 400;
     letter-spacing: 17.4px;
+    animation-name: moveToRight;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+@keyframes moveToLeft{
+    0%{
+       opacity: 0;
+       transform: translateX(-100px);
+    }
+    80%{
+       
+        transform: translateX(15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+@keyframes moveToRight{
+    0%{
+       opacity: 0;
+       transform: translateX(100px);
+    }
+    80%{
+       
+        transform: translateX(-15px);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0px);
+    }
 }
